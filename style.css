@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header {
+  height: auto;
+  width: 100%;
+}
+.ham-menu {
+  display: none;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  letter-spacing: 0.4rem;
+}
+@media (max-width: 720px) {
+  .ham-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  .open,
+  .close {
+    color: rgb(7, 238, 255);
+    font-size: 26px;
+    cursor: pointer;
+  }
+  #date-block,
+  #time-list {
+    width: 50%;
+  }
+  #ist,
+  #ast,
+  #pdate {
+    margin-top: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid yellow;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #aside-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: auto;
+    width: 100%;
+  }
+  .header {
+    display: none;
+  }
+}
+@media (min-width: 720px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+  }
+  #aside-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+#show-alarms {
+  border: 2px solid yellow;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin: 0.2rem;
+}
+
+#clock {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#stopWatch,
+#Alarm {
+  border: 2px solid yellow;
+  margin: 0.2rem;
+  padding: 0.3rem;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#ist,
+#ast {
+  cursor: pointer;
+  border: 2px solid yellow;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+.header.active {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+}
+.close {
+  display: none;
+}
+.divider{
+    border: 1px solid yellow;
+    height:1px;
+    width: 25%;
+    margin: 0.5rem;
+}
+
+#Timer-block {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+}
+#timer{
+    text-align: center;
+    padding:0.2rem;
+    letter-spacing: 0.2rem;
+}
